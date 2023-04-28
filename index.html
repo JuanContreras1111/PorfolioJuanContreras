@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+  <!--fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar__container">
+      <div class="navbar__logo">
+        
+      </div>
+      <div id="menu" class="navbar__menu">
+        <i id="btnClose" class='bx bx-x navbar__icon btn--close'></i>
+        <nav class="navbar__list">
+          <a class="navbar__link" href="#Home">Home</a>
+          <a class="navbar__link" href="#about__section">About</a>
+          <a class="navbar__link" href="#Skills">Skills</a>
+          <a class="navbar__link" href="#portfolio">Portfolio</a> 
+          <a class="navbar__link" href="#Contact">Contact</a>
+
+        </nav>
+      </div>
+      <div class="navbar__button">
+        <i id="btnOpen" class='bx bx-menu navbar__icon btn--open'></i>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section id="Home" class="about grid">
+      <div class="about__item">
+        < class="info">
+        <p style="text-align: center;" ><img src="\Imágenes\foto.png" alt="Profile image" > </p>
+          <div class="info__content">
+            <h2 class="info__name">Hi, I'm Juan Contreras</h2>
+            <p class ="info__description">Web Developer</p>
+          </div>
+        </div>
+      </div>
+      <div class="social__container">
+        <div class="social__media">
+          <a class="social__icon" href="https://www.linkedin.com/in/juan-camilo-contreras-pallares-583106254/" target="_blank">
+            <img class="social__img" src="assets/linkedin.svg" alt="">
+          </a>
+        </div>
+        <div class="social__media">
+          <a class="social__icon" href=" " target="_blank">
+            <img class="social__img" src="assets/instagram.svg" alt="">
+          </a>
+        </div>
+        <div class="social__media">
+          <a class="social__icon" href=" " target="_blank">
+            <img class="social__img" src="assets/twitter.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about__section" class="about__section">
+
+      <h2 class="about__title">About me</h2>
+      <p class="about__descriptions">I am a passionate and self-taught software developer with experience in developing web applications using technologies
+        such as JavaScript, React JS, HTML, CSS, and Python. I love working in teams and am capable of leading projects to
+        achieve established goals.
+        
+      </p>
+    </section>
+
+    <section id="Skills" class="Skills">
+      <h2 class="skills__title"> My skills</h2>
+      <div class="skill__mobile">
+        <img src="Imágenes/js.png" alt="">
+        <br>
+        JavaScript
+      </div>
+      <div class="skills__motion">
+        <img src="Imágenes/react.png" alt="">
+        <br>
+        React
+      </div>
+      <div class="skills__system">
+        <img src="Imágenes/python.png" alt="">
+        <br>
+        Python
+      </div>
+      <div class="skills__web">
+        <img src="Imágenes/Php.png" alt="">
+        <br>
+        Php
+      </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+      <div>
+        <h2 class="portfolio__h2">Portfolio</h2>
+      </div>
+      <section class="portfolio__screen">
+        <div class="portafolio_FamousPhrases">
+          <a class="social__icon" href="https://famous-phrasesjc.netlify.app" target="_blank">
+           <img src="Imágenes/FamousPhrases photo.png" width="257" height="269" alt=""> 
+          </a>
+          <a class="social__icon" href="https://weather-app-jcc.netlify.app" target="_blank">
+        <img src="Imágenes/weatherapp.jpeg" width="257" height="269" alt="">
+          </a>
+          <a class="social__icon" href="https://crud-of-users.netlify.app" target="_blank">
+        <img src="Imágenes/crud.jpeg" width="257" height="269" alt="">
+        </a>
+
+        <a class="social__icon" href="https://pokedex-jcc.netlify.app/pokedex" target="_blank">
+          <img src="Imágenes/pokedex.jpeg" width="257" height="269" alt="">
+          </a>
+
+          <a class="social__icon" href="https://aventuras-rick-and-morty.netlify.app" target="_blank">
+            <img src="Imágenes/rick.and.morty.jpeg" width="257" height="269" alt="">
+            </a>
+      </section>
+
+    </section>
+
+    <section id="Contact" class="contact">
+      <h2 class="contact__h2">Contact</h2>
+      <div class="contact__phone">
+        <img class="contact__phone__icon" src="assets/phone.svg" alt="icono telefono">
+        <p class="Contact__phone__phone">Phone number</p>
+        <font style="vertical-align: inherit;"></font>
+        <p class="contact__phone__num">3008911321</p>
+      </div>
+      <div class="contact__email">
+        <img class="contact__email__icon" src="assets/mail 1.svg" alt="icono correo electronico">
+        <p class="Contact__email__email">Email</p>
+        <p class="contact__email__mail">jccp1111@hotmail.com</p>
+      </div>
+    </section>
+  </main>
+  <script>
+    btnClose.onclick = function () {
+      menu.classList.remove('active')
+    }
+
+    btnOpen.onclick = function () {
+      menu.classList.add('active')
+    }
+
+    menu.addEventListener('click', function (event) {
+      if (event.target.matches('.navbar__link')) {
+        menu.classList.remove('active')
+      }
+    })
+  </script>
+  <footer class="container_Footer">
+    <p> Made by Juan Contreras</p>
+  </footer>
+  </body>
+</html>
